@@ -7,7 +7,7 @@ async function callApi() {
     let data = await res.json();
     const HOLIDAYS =  Object.keys(data);
     let BaseDate = new Date(2023,9 - 1, 11);
-    let today = new Date(2023,9 , 10);
+    let today = new Date();
 
     let yesterday = new Date();
     yesterday.setDate(today.getDate() - 1);
