@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="auther" content="kiyota">
+    <title>朝会当番チェッカー</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="inner">
+            <h1>朝会当番チェッカー</h1>
+        </div>
+    </div>
+    <main>
+        <div class="inner">
+            <ul class="section--main">
+                <li id="yesterday" class="card card_side">
+                    <p class="card_title"><span id="date-yesterday">昨日</span>の司会</p>
+                    <p class="host-name"><span id="host-yesterday"></span>さん</p>
+                </li>
+                <li id="today" class="card">
+                    <p class="card_title today"><span id="date-today">本日</span>の司会</p>
+                    <p class="host-name"><span id="host-today"></span>さん</p>
+                </li>
+                <li id="tomorrow" class="card card_side">
+                    <p class="card_title"><span id="date-tomorrow">明日</span>の司会</p>
+                    <p class="host-name"><span id="host-tomorrow"></span>さん</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/JavaScript" src="assets/js/index.js"></script>
+</body>
+</html>
