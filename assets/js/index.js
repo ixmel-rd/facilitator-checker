@@ -1,7 +1,7 @@
 
 
 async function callApi() {
-    MEMBERS = ["皆月","長束","本田"]
+    MEMBERS = ["松浦","加藤","藤沢","毛利"]
     DAY_OF_WEEK = ["（日）","（月）","（火）","（水）","（木）","（金）","（土）"];
     const res = await fetch("https://holidays-jp.github.io/api/v1/date.json");
     let data = await res.json();
