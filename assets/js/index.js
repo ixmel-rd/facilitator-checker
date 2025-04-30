@@ -39,7 +39,7 @@ async function callApi() {
 
     let pastWeekends = Math.floor((Math.floor((today - BaseDate) / 86400000)) / 7) * 2;
     let diff = Math.floor((today - BaseDate) / 86400000) - pastWeekends - pastHolidays;
-    let hostTodayIndex = diff % 3;
+    let hostTodayIndex = diff % MEMBERS.length;
 
     let hostYesterdayIndex = (hostTodayIndex + MEMBERS.length - 1) % MEMBERS.length;
     let hostTomorrowIndex = (hostTodayIndex + 1) % MEMBERS.length;
