@@ -41,20 +41,8 @@ async function callApi() {
     let diff = Math.floor((today - BaseDate) / 86400000) - pastWeekends - pastHolidays;
     let hostTodayIndex = diff % 3;
 
-    let hostYesterdayIndex;
-    let hostTomorrowIndex;
-
-    if (0 <= hostTodayIndex - 1) {
-        hostYesterdayIndex = hostTodayIndex - 1;
-    } else {
-        hostYesterdayIndex = 2;
-    }
-
-    if (hostTodayIndex + 1 <= 2) {
-        hostTomorrowIndex = hostTodayIndex + 1;
-    } else {
-        hostTomorrowIndex = 0;
-    }
+    let hostYesterdayIndex = (hostTodayIndex + MEMBER.length - 1) % MEMBER.length;
+    let hostTomorrowIndex = (hostTodayIndex + 1) % MEMBER.length;
 
     $("#host-yesterday").text(MEMBERS[hostYesterdayIndex])
     if (today.getDay() == 0 || today.getDay() == 6) {
