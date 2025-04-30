@@ -41,8 +41,8 @@ async function callApi() {
     let diff = Math.floor((today - BaseDate) / 86400000) - pastWeekends - pastHolidays;
     let hostTodayIndex = diff % 3;
 
-    let hostYesterdayIndex = (hostTodayIndex + MEMBER.length - 1) % MEMBER.length;
-    let hostTomorrowIndex = (hostTodayIndex + 1) % MEMBER.length;
+    let hostYesterdayIndex = (hostTodayIndex + MEMBERS.length - 1) % MEMBERS.length;
+    let hostTomorrowIndex = (hostTodayIndex + 1) % MEMBERS.length;
 
     $("#host-yesterday").text(MEMBERS[hostYesterdayIndex])
     if (today.getDay() == 0 || today.getDay() == 6) {
