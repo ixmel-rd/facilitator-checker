@@ -1,5 +1,5 @@
 async function callApi() {
-    MEMBERS = ["M.F.","M.M.","K.M.","K.K."]
+    MEMBERS = ["K.M.","M.F.","M.M."];
     DAY_OF_WEEK = ["（日）","（月）","（火）","（水）","（木）","（金）","（土）"];
     const res = await fetch("https://holidays-jp.github.io/api/v1/date.json");
     let data = await res.json();
